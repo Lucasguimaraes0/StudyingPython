@@ -4,8 +4,8 @@ from comodo import Comodo
 calc = Calculadora()
 
 comodo = Comodo(
-    float(input('Qual a largura do comodo\n')),
-    float(input('Qual a profundidade do comodo\n'))
+    input('Qual a largura do comodo\n'),
+    input('Qual a profundidade do comodo\n')
 )
 
 print(f"A área das paredes é: {calc.calcular_area_paredes(comodo)}")
