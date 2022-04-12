@@ -13,4 +13,7 @@ class Calculadora:
         return self.__area_teto
 
     def calcular_volume_tintas(self):
+        if self.__area_paredes <= 0 or self.__area_teto <= 0:
+            print("Não é possível calcular o volume de tinta com os valores informados.")
+            exit()
         return (self.__area_paredes + self.__area_teto) / 10
