@@ -1,16 +1,16 @@
 class Calculadora:
-    area_paredes: float
-    area_teto: float
+    __area_paredes: float
+    __area_teto: float
     
-    def calcular_area_paredes(self, largura, profundidade, altura):
-        self.area_paredes = 2 *(largura + profundidade) * altura
+    def calcular_area_paredes(self, comodo):
+        self.__area_paredes = 2 *(comodo.largura + comodo.profundidade) * comodo.altura
 
-        return self.area_paredes
+        return self.__area_paredes
 
-    def calcular_area_teto(self, largura, profundidade):
-        self.area_teto = largura * profundidade
+    def calcular_area_teto(self, comodo):
+        self.__area_teto = comodo.largura * comodo.profundidade
 
-        return self.area_teto
+        return self.__area_teto
 
     def calcular_volume_tintas(self):
-        return (self.area_paredes + self.area_teto) / 10
+        return (self.__area_paredes + self.__area_teto) / 10
